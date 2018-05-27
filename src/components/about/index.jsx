@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-const About = () => (
-  <div>
-    <h1>About Page</h1>
-    <p>This a about page</p>
+class About extends Component {
+  render() {
+    return (
+      <div style={{ marginTop: 50 }} >
+        <h1>About Page</h1>
+        <p>This a about page</p>
+        <p> Reading from the state ->> { props.routing.key }</p>
+        <button className="btn btn-primary">Button Primary</button>
+      </div>
+    )
+  }
+}
 
-    <button className="btn btn-primary">Button Primary</button>
-  </div>
-);
+function mapStateToProps(state) {
+  return {
+    routing: state.routing.location
+  };
+}
 
-export default About;
+export default connect(mapStateToProps)(About);
