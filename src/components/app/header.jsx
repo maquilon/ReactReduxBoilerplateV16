@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-const Header = () => {
+const Header = props => {
   return (
     <header>
-      <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <nav className="navbar navbar-expand-md navbar-dark fixed-top">
         <Link className="navbar-brand" to="/">APPLICATION</Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse"
           data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,10 +13,10 @@ const Header = () => {
         </button>
         <div className="collapse navbar-collapse">
           <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
+            <li className={(props.routing.pathname !== "/") ? 'nav-item' : 'nav-item active'}>
               <Link className="nav-link" to="/">Home</Link>
             </li>
-            <li className="nav-item">
+            <li className={(props.routing.pathname !== "/about-us") ? 'nav-item' : 'nav-item active'}>
               <Link className="nav-link" to="/about-us"> About</Link>
             </li>
           </ul>
@@ -25,4 +26,9 @@ const Header = () => {
   )
 }
 
-export default Header;
+
+const mapStateToProps = state => ({
+  routing: state.routing.location
+});
+
+export default connect(mapStateToProps)(Header);
