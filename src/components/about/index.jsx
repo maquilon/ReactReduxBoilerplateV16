@@ -7,7 +7,7 @@ class About extends Component {
       <div style={{ marginTop: 50 }} >
         <h1>About Page</h1>
         <p>This a about page</p>
-        <p> Reading from the state ->> { props.routing.key }</p>
+        <p> Reading from the state ->> { this.props.routing.key }</p>
         <button className="btn btn-primary">Button Primary</button>
       </div>
     )
