@@ -11,7 +11,7 @@ const Home = props => {
       <p>This a home page</p>
       <p> Reading pathname from the state ->> {props.routing.pathname}</p>
 
-      <button className="btn btn-secondary">Button secondary</button>
+      <button className="btn btn-primary">Button primary</button>
 
     </div>
   );

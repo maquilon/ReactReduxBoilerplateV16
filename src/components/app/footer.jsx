@@ -5,8 +5,8 @@ const Footer = () => {
 
     return (
         <footer className="pt-5">
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <p style={{ color: '#8a8a8a',  font: 'Open Sans, Helvetica Neue', fontSize: '12px', padding: '0px 0px 200px 0px' }}>
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <p className="text-muted pt-2" style={{ padding: '0px 0px 250px 0px' }}>
                     {currentDate} - APPLICATION Inc. All rights Reserved
                  </p>
             </nav>
