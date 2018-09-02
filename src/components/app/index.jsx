@@ -4,6 +4,7 @@ import Home from '../home';
 import About from '../about';
 import Header from './header';
 import Footer from './footer';
+import Notification from '../utils/notificationSystem';
 
 const App = () => (
   <React.Fragment>
@@ -11,10 +12,11 @@ const App = () => (
     <div style={{ paddingTop: 70 }} >
 
       <Route exact path="/" component={Home} />
-      <Route exact path="/about-us" component={About} />
+      <Route exact path="/aboutUs" component={About} />
 
     </div>
     <Footer />
+    <Notification />
   </React.Fragment>
 );
 

@@ -1,5 +1,3 @@
-import Immutable from 'immutable';
+// import Immutable from 'immutable';
 
-export default {    
-
-};
+export default {};

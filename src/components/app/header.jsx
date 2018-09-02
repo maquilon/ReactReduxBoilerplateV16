@@ -15,7 +15,7 @@ const Header = props => {
             <Link className="nav-link" to="/">Home</Link> 
           </li>
           <li className={(props.routing.pathname !== "/about-us") ? 'nav-item' : 'nav-item active'}>
-            <Link className="nav-link" to="/about-us"> About</Link> 
+            <Link className="nav-link" to="/aboutUs"> About</Link> 
           </li>
         </ul>
       </div>
