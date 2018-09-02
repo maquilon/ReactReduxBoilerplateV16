@@ -6,16 +6,16 @@ import Header from './header';
 import Footer from './footer';
 
 const App = () => (
-  <div className="container">
+  <React.Fragment>
     <Header />
+    <div style={{ paddingTop: 70 }} >
 
-    <main>
       <Route exact path="/" component={Home} />
       <Route exact path="/about-us" component={About} />
-    </main>
 
+    </div>
     <Footer />
-  </div>
+  </React.Fragment>
 );
 
 export default App;

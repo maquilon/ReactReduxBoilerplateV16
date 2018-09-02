@@ -4,7 +4,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const Home = props => (
-  <div>
+  <div className="container">
     <h1>Home Page</h1>
     <p>This a home page</p>
     <p> Reading from the state ->> { props.routing.key }</p>

@@ -4,9 +4,9 @@ const Footer = () => {
     let currentDate = new Date().getFullYear();
 
     return (
-        <footer className="container-fluid">
-            <nav className="navbar fixed-bottom">
-                <p style={{ color: '#fff', font: 'Open Sans, Helvetica Neue', fontSize: '12px', padding: '10px 10px 15px 0px' }}>
+        <footer className="pt-5">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <p style={{ color: '#8a8a8a',  font: 'Open Sans, Helvetica Neue', fontSize: '12px', padding: '0px 0px 200px 0px' }}>
                     {currentDate} - APPLICATION Inc. All rights Reserved
                  </p>
             </nav>
